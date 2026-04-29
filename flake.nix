@@ -3,8 +3,8 @@
 
   # Flake inputs
   inputs = {
-    # Latest stable Nixpkgs
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
+    # Use specific versoin of nix
+    nixpkgs.url = "github:NixOS/nixpkgs/a4bf06618f0b5ee50f14ed8f0da77d34ecc19160";
   };
 
   # Flake outputs
