@@ -1,2 +1,4 @@
 builddir/
 subprojects/*/
+.direnv/
+compile_commands.json
