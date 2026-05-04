@@ -75,11 +75,9 @@ class MemoryManager : public ReaderWriter {
 
     void write(const uint16_t address, const uint8_t value) noexcept override {
         if (address < kRomBank0Base + kRomBankSize) {
-            rom0.write(address, value);
             return;
         }
         if (address < kRomBank1Base + kRomBankSize) {
-            rom1.write(address, value);
             return;
         }
         if (address < kVramBase + kVramBankSize) {

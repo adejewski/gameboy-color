@@ -7,8 +7,8 @@ static constexpr size_t kRomBankSize = 0x4000;
 static constexpr uint16_t kRomBank0Base = 0x0000;
 static constexpr uint16_t kRomBank1Base = 0x4000;
 
-using RomBank0 = Memory<kRomBankSize, kRomBank0Base, true>;
-using RomBank1 = Memory<kRomBankSize, kRomBank1Base, true>;
+using RomBank0 = Reader;
+using RomBank1 = Reader;
 
 // VRAM
 static constexpr size_t kVramBankSize = 0x2000;

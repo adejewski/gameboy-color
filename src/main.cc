@@ -1,11 +1,11 @@
 #include <array>
 #include <print>
 
+#include "memory/cartridge.hh"
 #include "memory/memory.hh"
 #include "memory/memory_manager.hh"
 
-RomBank0 rom0;
-RomBank1 rom1;
+Cartridge cartridge;
 
 std::array<VramBank, 2> vram;
 uint8_t vbk;
@@ -21,8 +21,19 @@ HramBank hram;
 
 IORegisters io_registers;
 uint8_t ie;
-auto memory_manager =
-    MemoryManager{rom0, rom1, vram, vbk, external_ram, wram0, wramN, svbk, oam, hram, io_registers, ie};
+auto memory_manager = MemoryManager{
+    cartridge.bank0(),
+    cartridge.bank1(),
+    vram,
+    vbk,
+    external_ram,
+    wram0,
+    wramN,
+    svbk,
+    oam,
+    hram,
+    io_registers,
+    ie};
 
 int main() {
     std::println("Gameboy emulator started");
