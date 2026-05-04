@@ -8,19 +8,19 @@
 Cartridge cartridge;
 
 std::array<VramBank, 2> vram;
-uint8_t vbk;
+uint8_t vbk = 0;
 
 Memory<kExternalRamSize, kExternalRamBase> external_ram;
 
 WramBank0 wram0;
 std::array<WramBankN, 7> wramN;
-uint8_t svbk;
+uint8_t svbk = 1;
 
 OamBank oam;
 HramBank hram;
 
 IORegisters io_registers;
-uint8_t ie;
+uint8_t ie = 0;
 auto memory_manager = MemoryManager{
     cartridge.bank0(),
     cartridge.bank1(),

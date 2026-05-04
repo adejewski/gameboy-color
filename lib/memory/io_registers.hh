@@ -112,8 +112,7 @@ class IORegisters : public ReaderWriter {
     uint8_t sb{0};
 
    public:
-    [[nodiscard]] uint8_t read(const uint16_t address) const noexcept override {
-        (void)address;
+    [[nodiscard]] uint8_t read([[maybe_unused]] const uint16_t address) const noexcept override {
         // FIXME(adejewski): Unimplemented fix me later
         return 0xFF;
     }
