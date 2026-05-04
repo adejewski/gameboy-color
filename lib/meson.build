@@ -12,7 +12,7 @@ gtest_dep = dependency('gtest', main : true,
   fallback : ['gtest', 'gtest_main_dep'])
 
 test_exe = executable('test_gameboy',
-  sources : [],
+  sources : ['cpu/registers_test.cc'],
   dependencies : [gameboy_dep, gtest_dep]
 )
 

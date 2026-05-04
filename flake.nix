@@ -42,6 +42,8 @@
               meson
               just
               clang-tools
+              pkg-config
+              gtest
             ];
           };
         }
